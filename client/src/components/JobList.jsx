@@ -12,7 +12,7 @@ const JobList = () => {
   const fetchJobs = async () => {
     const token = localStorage.getItem('token');
     try {
-      const response = await axios.get('http://localhost:5000/api/job/list', {
+      const response = await axios.get('https://job-posting-board-bfnr.onrender.com/api/job/list', {
         headers: {
           'Authorization': `Bearer ${token}` 
         },
@@ -28,7 +28,7 @@ const JobList = () => {
   const handleSendJobAlert = async (jobId) => {
     const token = localStorage.getItem('token');
     try {
-      const response = await axios.post(`http://localhost:5000/api/send-updates/${jobId}`, {}, {
+      const response = await axios.post(`https://job-posting-board-bfnr.onrender.com/api/send-updates/${jobId}`, {}, {
         headers: {
           'Authorization': `Bearer ${token}` 
         },

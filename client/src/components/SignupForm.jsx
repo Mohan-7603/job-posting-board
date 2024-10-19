@@ -46,7 +46,7 @@ const SignUpForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const response = await axios.post('https://job-posting-board-bfnr.onrender.com/api/auth/register', formData);
       alert(response.data.message);
 
       localStorage.setItem('userName', formData.name);

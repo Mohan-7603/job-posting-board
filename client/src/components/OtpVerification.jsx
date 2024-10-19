@@ -20,7 +20,7 @@ const OtpVerification = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/verify-otp', otpData);
+      const response = await axios.post('https://job-posting-board-bfnr.onrender.com/api/auth/verify-otp', otpData);
       alert(response.data.message);
       setIsVerified(true);
 

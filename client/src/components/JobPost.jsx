@@ -40,7 +40,7 @@ const JobPost = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/api/job/post', jobData, {
+      const response = await axios.post('https://job-posting-board-bfnr.onrender.com/api/job/post', jobData, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}` 
@@ -71,12 +71,10 @@ const JobPost = () => {
     <>
       <Navbar showUser={true} />
       <div className="flex h-screen">
-        {/* Side Navigation */}
         <div className="flex flex-col items-center md:items-start w-16 border-r border-gray-300 md:w-[4%]">
           <div className="flex items-center justify-center w-full h-28" onClick={handleHome}>
             <FaHome className="text-gray-600 text-3xl cursor-pointer" />
           </div>
-          {/* Jobs Posted Icon */}
           <div className="flex items-center justify-center w-full h-28" onClick={handleViewJobs}>
             <FaClipboardList className="text-gray-600 text-3xl cursor-pointer" />
           </div>
